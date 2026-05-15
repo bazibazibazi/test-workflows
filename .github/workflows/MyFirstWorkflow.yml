@@ -21,7 +21,8 @@ jobs:
       - name: Show context
         shell: bash
         run: |
-          echo "Hello world from ${{ github.actor }}."
+          echo "Hello ${{ vars.WHO_TO_GREET }} from ${{ github.actor }}."
+          echo "My secret is ${{ secrets.MY_SECRET }}"
           echo "Current branch is '${{ github.ref }}'."
 
       - name: List files
